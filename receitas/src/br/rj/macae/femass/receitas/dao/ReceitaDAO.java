@@ -31,7 +31,7 @@ public class ReceitaDAO implements IDAO{
             PreparedStatement stmt = conn.prepareStatement(sql);
             // preenche os valores         
             stmt.setString(1, receita.getNome());
-            stmt.setString(2, receita.getIngredientes());
+            //stmt.setString(2, receita.getIngredientes());
             stmt.setString(3, receita.getPreparo());
             
             stmt.executeUpdate();
@@ -57,7 +57,7 @@ public class ReceitaDAO implements IDAO{
             PreparedStatement stmt = conn.prepareStatement(sql);
             // preenche os valores         
             stmt.setString(1, receita.getNome());
-            stmt.setString(2, receita.getIngredientes());
+            //stmt.setString(2, receita.getIngredientes());
             stmt.setString(3, receita.getPreparo());
             stmt.setInt(4, receita.getId());
             stmt.executeUpdate();
@@ -100,7 +100,7 @@ public class ReceitaDAO implements IDAO{
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 Receita r = new Receita(rs.getString("nome"));
-                r.setIngredientes(rs.getString("ingredientes"));
+                //r.setIngredientes(rs.getString("ingredientes"));
                 r.setPreparo(rs.getString("preparo"));
                 r.setId(rs.getInt("id"));
                 lista.add(r);
@@ -126,7 +126,7 @@ public class ReceitaDAO implements IDAO{
             ResultSet rs = stmt.executeQuery();
             rs.next();
             Receita r = new Receita(rs.getString("nome"));
-            r.setIngredientes(rs.getString("ingredientes"));
+            //r.setIngredientes(rs.getString("ingredientes"));
             r.setPreparo(rs.getString("preparo"));
             r.setId(rs.getInt("id"));
             

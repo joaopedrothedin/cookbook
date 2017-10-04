@@ -85,7 +85,7 @@ public class Categoria {
             this.receitas.add(r);
         }
     }
-
+    //Colocar em todos 
     @Override
     public int hashCode() {
         int hash = 3;
